@@ -8,9 +8,11 @@
   for numbers divisible by only one of those).
 */
 
-var fizzBuzz = function() {
+var fizzBuzz = function(number) {
   var num = 0;
-  while (num < 100) {
+  if (number == undefined)
+    number = 100;
+  while (num < number) {
   num++;
   //For each iteraction initialize a new empty string.
   var string = '';
