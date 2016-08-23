@@ -10,8 +10,9 @@
 */
 
 function isEven(n) {
-  	n = Math.abs(n);
-  	n = Number(n);
+  	n = Number(Math.abs(n));
+   if (isNaN(n))
+      return false;
     if (n === 0)
       return true;
     else if (n === 1)
