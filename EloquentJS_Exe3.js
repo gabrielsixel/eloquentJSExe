@@ -13,7 +13,7 @@
    # # # #
   # # # #
 */
-var chessBoard = function(width, height) {
+function chessBoard(width, height) {
   var boardWidth = "";
   for (var j = 0; j < height; j++) {
     for (var i = 0; i <= width; i++) {
@@ -27,6 +27,5 @@ var chessBoard = function(width, height) {
       }
     }
   }
-   console.log(boardWidth);
-};
-chessBoard (8, 8);
+  return boardWidth;
+}

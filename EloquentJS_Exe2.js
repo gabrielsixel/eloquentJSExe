@@ -8,23 +8,23 @@
   for numbers divisible by only one of those).
 */
 
-var fizzBuzz = function(number) {
+function fizzBuzz(number) {
   var num = 0;
-  if (number == undefined)
+  if (number === undefined)
     number = 100;
   while (num < number) {
-  num++;
-  //For each iteraction initialize a new empty string.
-  var string = '';
-  if(num % 3 === 0) {
-    string += "Fizz";
+    num++;
+    //For each iteraction initialize a new empty string.
+    var string = '';
+    if(num % 3 === 0) {
+      string += "Fizz";
+    }
+    if(num % 5 === 0) {
+      string += "Buzz";
+    }
+    if (string === '') {
+      string += num;
+    }
+    return string;
   }
-  if(num % 5 === 0){
-    string += "Buzz";
-  }
-  if (string === ''){
-    string += num;
-  }
-    console.log(string);
-  }
-};
+}
