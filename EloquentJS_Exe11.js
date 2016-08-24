@@ -8,7 +8,6 @@ arrays.
 
 var arrays = [[1, 2, 3], [4, 5], [6]];
 // Your code here.
-return console.log(
-  arrays.reduce(function(newArray, array) { return newArray.concat(array); }, []));
+console.log( arrays.reduce(function(newArray, array) { return newArray.concat(array); }, []));
 // finally understanded this thing, its easy now
 // → [1, 2, 3, 4, 5, 6]
