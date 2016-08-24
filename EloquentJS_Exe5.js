@@ -19,6 +19,6 @@ function isEven(n) {
       return false;
     else
     // Note to self, the function return shuld be the recursive call, anything
-    // else won't work (take me too long to realize this).
+    // else won't work (took me too long to realize this).
       return isEven(n -= 2);
 }
