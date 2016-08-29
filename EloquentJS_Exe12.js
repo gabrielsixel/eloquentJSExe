@@ -9,7 +9,6 @@
   the array. The byName object, which makes it easy to find a person’s object
   from their name, might be useful here.
 */
-
 function average(array) {
   function plus(a, b) { return a + b; }
   return array.reduce(plus) / array.length;
@@ -19,8 +18,12 @@ var byName = {};
 ancestry.forEach(function(person) {
   byName[person.name] = person;
 });
-function hasKnownMother = {
-ancestry.filter(function(person){
-  return person.mother !== null;
+
+var momsAge = ancestry.filter(function(person) {
+  return byName[person.mother] !== null; }).map(function(person) {
+  return person.born - byName[person.mother].born;
 });
-};
+
+function ageDifference(array) {
+  return average(momsAge);
+}
